@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { biblioteca } from "./controller.js";
+import { bibliotecas } from "./controller.js";
 
 export const router = Router()
 
-router.get('/biblioteca', biblioteca.getAll);
+router.get('/biblioteca', bibliotecas.getAll);

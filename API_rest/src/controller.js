@@ -1,11 +1,11 @@
-import {pool} from "./database.js";
+import {pool} from "./database.js" ;
 
 class PersonaController{
 
-    async getAll(reg, res){
-        const result = await pool.query(`SELECT * FROM biblioteca`);
+    async getAll(req, res){
+        const [result] = await pool.query(`SELECT * FROM biblioteca`);
         res.json(result);
     }
 }
 
-export const biblioteca = new PersonaController();
+export const bibliotecas = new PersonaController();
