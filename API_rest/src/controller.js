@@ -7,10 +7,15 @@ class PersonaController{
         res.json(result);
     }
 
+    async get(req, res){
+        const [result] = await pool.query(`SELECT * FROM biblioteca WHERE id=(?)`,[biblioteca.id]);
+        res.json("El id es del registro", result);
+    }
+
     async add(req,res){
         const biblioteca = req.body;
         const [result] = await pool.query (`INSERT INTO biblioteca(titulo,autor,fecha,ISBN) VALUES(?,?,?,?)`,[biblioteca.titulo,biblioteca.autor,biblioteca.fecha,biblioteca.ISBN]);
-        res.json({"Id insertado": result,insertId});
+        res.json({"Id insertado": result.insertId});
     }
 
     async delete(req,res){
