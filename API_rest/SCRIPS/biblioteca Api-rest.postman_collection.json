@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "c5d437c6-6f0e-41e9-a1bb-06a4b66447a7",
+		"name": "biblioteca Api-rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31007060"
+	},
+	"item": [
+		{
+			"name": "post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "(\r\n    \"titulo\" : \"Encuentros el lado b del amor\",\r\n    \"autor\" : \"Gabriel Rolón\",\r\n    \"fecha\" : \"03/2019\",\r\n    \"ISBN\" : \"978-987-580-962-8\",\r\n)",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/biblioteca",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"biblioteca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "(\r\n    \"id\" : \"1\"\r\n    \"titulo\" : \"Detrás del Espejo\",\r\n    \"autor\" : \"Marcelo Consentino\",\r\n    \"fecha\" : \"02/2021\",\r\n    \"ISBN\" : \"978-987-85-3063-5\",\r\n)",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/biblioteca",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"biblioteca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "(\r\n    \"id\" : \"1\"\r\n    \"titulo\" : \"Detrás del Espejo\",\r\n    \"autor\" : \"Marcelo Consentino\",\r\n    \"fecha\" : \"02/2021\",\r\n    \"ISBN\" : \"978-987-85-3063-5\",\r\n)",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/biblioteca",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"biblioteca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/biblioteca",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"biblioteca"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOne",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\"= \"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/biblioteca",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"biblioteca"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
